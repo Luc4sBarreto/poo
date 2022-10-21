@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>eleicao</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script> 
+    var contCarlos = 0, contRicelli = 0, contNulos =0, contBranco =0;
+        alert("votos\nCarlos = " + 
+            contCarlos + "\nRicelli = " + contRicelli + 
+            "\nNulos = " + contNulos + "\nBranco = " + contBranco);
+    do{
+        var op = prompt("Digite seu voto")
+         switch(op){
+            case '1': contCarlos++;break;
+            case '2': contRicelli++;break;
+            case '': contBranco++;break;
+            case 'sair': alert("Encerramento da votação"); 
+            default: contNulos++;
+        } 
+       
+    }while(op!='sair'); document.write("<center><h1> FIM </h1></center>");
+    contNulos -=1;
+    document.write("<h2> <b>votos</b> </h2><br>Carlos = " + 
+            contCarlos + "<br>Ricelli = " + contRicelli + 
+            "<br>Nulos = " + contNulos + "<br>Branco = " + contBranco);
+    </script>
+</body>
+</html>
